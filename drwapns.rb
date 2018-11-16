@@ -12,5 +12,6 @@ class Drwapns < Formula
     system "make", "install", "PREFIX=#{prefix}" # if this fails, try separate make/make install steps
   end
 
+  depends_on :xcode => ["9.2", :build]
 end
 
