@@ -9,7 +9,9 @@ class Drwapns < Formula
   # depends_on "cmake" => :build
 
   def install
-    system "make", "install" # if this fails, try separate make/make install steps
+    system "make", "install", "PREFIX=#{prefix}" # if this fails, try separate make/make install steps
   end
+
+  depends_on :xcode => ["9.2", :build]
 end
 
